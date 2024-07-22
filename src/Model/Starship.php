@@ -10,7 +10,18 @@ class Starship
         private string $class,
         private string $captain,
         private StarshipStatusEnum $status,
+        private \DateTimeImmutable $arrivedAt,
     ) {
+    }
+
+    public function getArrivedAt(): \DateTimeImmutable
+    {
+        return $this->arrivedAt;
+    }
+
+    public function setArrivedAt(\DateTimeImmutable $arrivedAt): void
+    {
+        $this->arrivedAt = $arrivedAt;
     }
 
     public function getId(): int
@@ -51,5 +62,4 @@ class Starship
             StarshipStatusEnum::COMPLETED => 'images/status-complete.png',
         };
     }
-
 }

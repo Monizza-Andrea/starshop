@@ -21,14 +21,16 @@ class StarshipRepository
                 'USS LeafyCruiser (NCC-0001)',
                 'Garden',
                 'Jean-Luc Pickles',
-                StarshipStatusEnum::IN_PROGRESS
+                StarshipStatusEnum::IN_PROGRESS,
+                new \DateTimeImmutable,
             ),
             new Starship(
                 2,
                 'USS Espresso (NCC-0001)',
                 'Latte',
                 'Jean-Luc Pickles',
-                StarshipStatusEnum::COMPLETED
+                StarshipStatusEnum::COMPLETED,
+                new \DateTimeImmutable,
             ),
             new Starship(
                 3,
@@ -36,6 +38,7 @@ class StarshipRepository
                 'Tourist',
                 'Jean-Luc Pickles',
                 StarshipStatusEnum::WAITING,
+                new \DateTimeImmutable,
             ),
         ];
     }
